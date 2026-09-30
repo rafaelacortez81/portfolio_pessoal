@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffbac0;
+
+    font-family: "Patrick Hand", cursive;
+
+    color: #222;
+
+    padding: 25px;
+}
+
+
+.pagina::after {
+    content: "";
+
+    position: absolute;
+
+    top: 80px;
+    left: 35px;
+    right: 35px;
+    bottom: 12px;
+
+    background-color: #ffeeee;
+
+    border: 2px solid #222;
+
+    border-radius: 20px;
+
+    z-index: 0;
+}
+
+
+
+header {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 7px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+header a {
+    text-decoration: none;
+
+    color: #222;
+
+    background-color: #ff858b;
+
+    border: 2px solid #222;
+
+    border-radius: 6px;
+
+    padding: 3px 10px;
+
+    font-size: 25px;
+
+    transition: 0.2s;
+
+}
+
+header a:hover {
+    background-color: #ff646c;
+
+    transform: rotate(-2deg) scale(1.05);
+}
+
+
+.inicio {
+    min-height: 450px;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.nome {
+    position: absolute;
+
+    top: 100%;
+    left: 50%;
+
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    gap: 40px;
+
+    font-family:'Times New Roman', Times, serif;
+    font-size: 90px;
+}
+
+
+
+
+.foto {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 270px;
+    height: 270px;
+
+    border-radius: 50%;
+    background-color: #ff858b;
+    border: 2px solid #222;
+
+    overflow: hidden;
+
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+
+.foto img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    
+}
+
+
+
+.conteudo,
+.sobre,
+.certificados,
+.contato {
+
+    min-height: 450px;
+
+    position: relative;
+
+    z-index: 2;
+
+    padding: 40px;
+}
+
+
+
+h1 {
+    font-family: "Schoolbell", cursive;
+
+    font-size: 42px;
+
+    margin-bottom: 30px;
+}
+
+
+.projetos {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.projeto {
+    text-align: center;
+}
+
+.projeto img {
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    background-color: #ff858b;
+
+    border: 2px solid #222;
+
+    border-radius: 15px;
+}
+
+.projeto h2 {
+    font-size: 25px;
+
+    margin-top: 8px;
+}
+
+.projeto p {
+    font-size: 18px;
+}
+
+
+.sobre {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+}
+
+.texto {
+    width: 55%;
+
+    border-right: 2px solid #555;
+
+    padding-right: 40px;
+}
+
+.texto p {
+    font-size: 21px;
+
+    margin-bottom: 15px;
+}
+
+.foto-sobre {
+    width: 300px;
+    height: 300px;
+
+    background-color: #ff858b;
+
+    border: 2px solid #222;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+}
+
+.foto-sobre img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+
+.certificados {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.certificados h2 {
+    color: #ff555d;
+
+    font-size: 27px;
+
+    margin-bottom: 25px;
+}
+
+.certificado {
+    width: 600px;
+    height: 400px;
+
+    background-color: #ff858b;
+
+    border: 2px solid #222;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.certificado img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+
+
+.contato {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+}
+
+.contato p {
+    font-size: 22px;
+
+    margin: 20px 0;
+}
+
+.foto-contato {
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    background-color: #ff858b;
+
+    border: 2px solid #222;
+
+    overflow: hidden;
+      box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.foto-contato img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+     
+}
+
+
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .pagina {
+        width: 100%;
+    }
+
+    header {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    header a {
+        font-size: 13px;
+    }
+
+    .inicio {
+        flex-direction: column;
+
+        gap: 40px;
+    }
+
+    .nome {
+        font-size: 45px;
+    }
+
+    .nome span:last-child {
+        margin-left: 100px;
+
+        margin-top: 50px;
+    }
+
+    .projetos {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre,
+    .contato {
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+    .texto {
+        width: 100%;
+
+        border-right: none;
+
+        border-bottom: 2px solid #555;
+
+        padding-bottom: 25px;
+
+        padding-right: 0;
+    }
+}
